@@ -1,0 +1,7 @@
+rm -rf /tmp/g10k ; GDIR=$RANDOM ; mkdir /tmp/$GDIR/ ; cd /tmp/$GDIR/ ; \
+wget https://raw.githubusercontent.com/xorpaul/g10k-environment/benchmark/Puppetfile ; \
+time g10k -puppetfile
+
+RDIR=$RANDOM ; mkdir /tmp/$RDIR/ ; cd /tmp/$RDIR/ ; \
+wget https://raw.githubusercontent.com/xorpaul/g10k-environment/benchmark/Puppetfile ; \
+time r10k puppetfile install
